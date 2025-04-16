@@ -1,0 +1,121 @@
+@font-face {
+  font-family: "MyFont";
+  src: url("./assets/minecraft-ten-font-cyrillic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #f6e59f;
+  font-family: "MyFont";
+  height: 100vh;
+  padding: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+img {
+  image-rendering: pixelated;
+}
+
+button {
+  font-family: "MyFont";
+  cursor: pointer;
+  transition: 0.2s;
+  background-color: #784838;
+  border-radius: 10px;
+  padding: 23px 10px;
+  color: #fff;
+  box-shadow: 6px 6px 6px 0px #00000082;
+  border: unset;
+}
+
+button:hover {
+  background-color: #784838de;
+}
+
+.container {
+  height: calc(100vh - 50px);
+  /* background-color: #5fe0b5; */
+  background-color: #fffad5;
+  border-radius: 10px;
+  padding-top: 15px;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 44%);
+  grid-gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.selectable {
+  cursor: pointer;
+  transition: 0.2s;
+  background-color: #784838;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 23px 10px;
+  align-items: center;
+  color: #fff;
+  box-shadow: 6px 6px 6px 0px #00000082;
+}
+
+.selectable img {
+  max-width: 100px;
+  width: 80%;
+  margin-bottom: 15px;
+}
+
+label {
+  font-size: 15px;
+  line-height: 21px;
+  letter-spacing: 0.5px;
+}
+
+.header-title {
+  color: #784838;
+  font-size: 20px;
+  margin: 0px 0 35px;
+  display: block;
+}
+
+.selectable.selected {
+  background-color: #d3c9a1;
+  color: #784838;
+  box-shadow: inset 4px 5px 5px 0px #00000082, inset -1px -1px 4px 0px #00000082;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.hidden {
+  display: none;
+}
+
+.animation {
+  height: 56%;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.animation img {
+  max-width: 250px;
+  width: 65%;
+}
+
+.timer {
+  font-size: 52px;
+  color: #784838;
+  margin: 35px 0px 9px;
+  text-shadow: 5px 4px 9px black;
+}

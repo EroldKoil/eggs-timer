@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Варка яиц</title>
+    <link rel="stylesheet" href="style.css" />
+    <audio id="endSound" src="assets/end.mp3" preload="auto"></audio>
+    <audio id="startSound" src="assets/start.mp3" preload="auto"></audio>
+  </head>
+  <body>
+    <div id="stage1" class="container">
+      <label class="header-title">НУЖНАЯ ГОТОВНОВСТЬ</label>
+      <div class="image-grid">
+        <div class="selectable selected" id="1">
+          <img src="assets/agg1.png" />
+          <label>ВСМЯТКУ</label>
+        </div>
+        <div class="selectable" id="2">
+          <img src="assets/agg2.png" />
+          <label>В МЕШОЧЕК</label>
+        </div>
+        <div class="selectable" id="3">
+          <img src="assets/agg3.png" />
+          <label>СРЕДНЯЯ ГОТОВНОСТЬ</label>
+        </div>
+        <div class="selectable" id="4">
+          <img src="assets/agg4.png" />
+          <label>ВКРУТУЮ</label>
+        </div>
+      </div>
+      <button id="startBtn">Начать</button>
+    </div>
+
+    <div id="stage2" class="container hidden">
+      <div class="animation">
+        <img id="frame" src="assets/chicken1.png" />
+      </div>
+      <div class="timer" id="timer">10</div>
+      <div class="controls">
+        <button id="pauseBtn">Пауза</button>
+        <button id="stopBtn">Стоп</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
