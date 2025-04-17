@@ -7,7 +7,7 @@ const timerEl = document.getElementById("timer");
 const pauseBtn = document.getElementById("pauseBtn");
 const stopBtn = document.getElementById("stopBtn");
 
-const timers = [5, 240, 300, 360];
+const timers = [120, 240, 360, 600];
 const startSound = document.getElementById("startSound");
 const endSound = document.getElementById("endSound");
 let selected = 1;
@@ -59,7 +59,12 @@ function getTimer(timer) {
 
 function startAnimation() {
   animationInterval = setInterval(() => {
-    frameIndex = (frameIndex + 1) % frames.length;
+    const newFrameIndex = (frameIndex + 1) % frames.length;
+
+    if (newFrameIndex === 5 && isPaused) {
+      return;
+    }
+    frameIndex = newFrameIndex;
     frame.src = "assets/" + frames[frameIndex];
   }, 150);
 }
@@ -67,6 +72,7 @@ function startAnimation() {
 function startEndAnimation() {
   animationInterval = setInterval(() => {
     frameIndex = (frameIndex + 1) % endFrames.length;
+
     frame.src = "assets/" + endFrames[frameIndex];
   }, 150);
 }
